@@ -1,0 +1,597 @@
+import java.util.*; 
+
+ public class Tourismfinal2 
+
+ 
+
+{  
+
+    public static void main(String args[]) 
+
+ 
+
+{ 
+
+ 
+
+Scanner in = new Scanner(System.in); 
+
+ 
+
+int vstr,tvstr=0,nvstr,tnvstr=0,vfd,tvfd=0,nvfd,tnvfd=0,fd, tfd = 0,amt = 0,tamt = 0,tamt1=0,amt2 = 0,totald=0,damt = 0,ch,tamt2=0; 
+
+ 
+
+double gst=0,tot,gtotal; 
+
+ 
+
+String str="",choice,choice1 ="Y"; 
+
+ 
+
+System.out.println("Welcome to Amrita Tourism!!!"); 
+
+ 
+
+System.out.println("Asia: 1"); System.out.println("Europe: 2"); 
+
+ 
+
+System.out.println("Australia: 3"); 
+
+ 
+
+System.out.println(); 
+
+ 
+
+while(choice1.equalsIgnoreCase("Y")) 
+
+ 
+
+{ 
+
+System.out.println("Enter for Asia:"); 
+
+System.out.println("Enter for Europe:"); 
+
+System.out.println("Enter for Australia:"); 
+
+System.out.println(); 
+
+ 
+
+System.out.println("Enter Your Choice"); 
+
+ch=in.nextInt(); 
+
+ switch(ch) 
+
+ { 
+
+case 1: 
+
+System.out.println("Welcome to Amrita's Asian tourism section!!!:");  
+
+System.out.println("Enter 'IN' for INDIA and 'TH' for THAILAND"); 
+
+str=in.next();  
+
+if(str.equalsIgnoreCase("IN")) 
+
+{ 
+
+System.out.println("Amrita's AsianIndian Tourism package\t\t\tPrice in Rs."); 
+
+System.out.println("1.Agra\t\t\t\t60000");  
+
+System.out.println("2. Mumbai\t\t\t60000"); 
+
+System.out.println("3.Kerala\t\t\t60000"); 
+
+System.out.println("4.Jammu and kashmir\t\t\t50000");  
+
+System.out.println("5. Tamil Nadu\t\t\t50000"); 
+
+System.out.println("6.Delhi \t\t\t30000"); 
+
+System.out.println("7.Assam\t\t\t30000");  
+
+System.out.println("8.Darjelling\t\t\t25000"); 
+
+System.out.println("9.Mizoram\t\t\t25000"); 
+
+System.out.println("10.Meghalaya\t\t\t20000"); 
+
+System.out.println(); 
+
+choice="Y"; 
+
+while(choice.equalsIgnoreCase("Y")) 
+
+{ 
+
+System.out.println("Choose the Indian place that you wish to go by entering the number:"); 
+
+vstr=in.nextInt(); 
+
+System.out.println("Enter the number of days:"); 
+
+tvstr=in.nextInt(); 
+
+if( vstr >=1&& vstr <= 3 ) 
+
+ amt = tvstr * 60000; 
+
+if( vstr ==4||vstr==5||vstr==10) 
+
+ 
+
+amt= tvstr *50000; 
+
+if(vstr== 6||vstr ==7) 
+
+amt= tvstr* 30000;  
+
+if(vstr== 8||vstr ==9) 
+
+amt=tvstr *25000; 
+
+tamt=tamt+amt; 
+
+System.out.println("Do you need to add another place:" ) ;  
+
+choice=in.next(); 
+
+ 
+
+} 
+
+ 
+
+} 
+
+ 
+
+if(str.equalsIgnoreCase("TH")) 
+
+{ 
+
+System.out.println("Amrita's Thailand Tourism Package in Rs."); 
+
+System.out.println("1.Bangkok\t\t\t\t17000"); 
+
+System.out.println("2.Phuket\t\t\t17000"); 
+
+System.out.println("3.Chiang mai\t\t\t16000"); 
+
+System.out.println("4.Pattaya\t\t\t18000"); 
+
+System.out.println("5.Krabi\t\t\t\t18000"); 
+
+System.out.println("6.Murg Tandoori\t\t\t\t190"); 
+
+System.out.println("7.Hua Hin\t\t\t19000"); 
+
+System.out.println("8.Koh samui\t\t\t16000"); 
+
+System.out.println("9.Kanchanaburi\t\t\t18000"); 
+
+System.out.println("10.Koh phi phi\t\t\t 18000"); 
+
+choice="Y"; 
+
+ 
+
+while(choice.equalsIgnoreCase("Y")) 
+
+{ 
+
+System.out.println("Choose the Thailand place that you wish to go by entering the number :"); 
+
+nvstr=in.nextInt(); 
+
+System.out.println("Enter the number of days:"); 
+
+tnvstr=in.nextInt(); 
+
+if(nvstr==1||nvstr==2) 
+
+amt=tnvstr *17000; 
+
+if(nvstr== 3||nvstr ==8) 
+
+amt= tnvstr * 16000; 
+
+if(nvstr==4||nvstr==5||nvstr==9||nvstr==10) 
+
+amt= tnvstr * 18000; 
+
+if(nvstr== 6||nvstr ==7) 
+
+amt= tnvstr* 19000; 
+
+tamt=tamt+amt; 
+
+tamt=tamt+amt; 
+
+System.out.println("Do you need to add another place Enter Y/N"); 
+
+choice=in.next(); 
+
+} 
+
+} 
+
+break; 
+
+case 2: 
+
+System.out.println("Welcome to Amrita's Europe Tourism Section:");  
+
+System.out.println("Enter 'F' for France,'I' for Italy and 'G' for Germany"); 
+
+str=in.next(); 
+
+System.out.println(str.equalsIgnoreCase("F"));  
+
+if(str.equalsIgnoreCase("F")) 
+
+{ 
+
+System.out.println("Amrita's France Tourism Package");  
+
+System.out.println("Amrita's France Tourism Package in Rs.."); 
+
+System.out.println("1.Paris\t\t\t\t\t\t18000"); 
+
+System.out.println("2.Versailles\t\t\t\t\t18000");  
+
+System.out.println("3.Burgundy\t\t\t\t\t\t15000"); 
+
+System.out.println("4.Brittany\t\t\t\t\t\t14000"); 
+
+System.out.println("5.Pyrenees mountains\t\t\t\t\t14000"); 
+
+System.out.println("6.Normandy\t\t\t\t\t14000"); 
+
+System.out.println("7.Biarritz\t\t\t\t\t\t15000");  
+
+System.out.println("8.Saint Jeande Luz\t\t\t\t\t15000"); 
+
+System.out.println("9. Chinonro ro \t\t\t\t\t\t11000"); 
+
+System.out.println("10.Rouen\t\t\t\t\t14000"); 
+
+System.out.println("11.Carcassonne\t\t\t\t\t\t40000"); 
+
+System.out.println("12.Alsace region \t\t\t\t\t60000"); 
+
+choice ="Y"; 
+
+while(choice.equalsIgnoreCase("Y")) 
+
+{ 
+
+System.out.println("Choose the place which you wish to go in France:"); 
+
+//while(choice.equalsIgnoreCase("Y")) 
+
+ 
+
+//System.out.println("Do you want to add another place: "); 
+
+vfd=in.nextInt(); 
+
+System.out.println("Enter the number of days:"); 
+
+tvfd=in.nextInt(); 
+
+if(vfd== 1||vfd ==2) 
+
+amt =tvfd* 18000;  
+
+if(vfd== 3||vfd ==7||vfd==8) 
+
+amt =tvfd* 15000; 
+
+if(vfd== 4||vfd ==5||vfd==6||vfd==10) 
+
+amt =tvfd* 14000; 
+
+if( vfd ==9) 
+
+amt =tvfd*11000; 
+
+if( vfd ==11) 
+
+amt =tvfd* 40000; 
+
+if( vfd ==12) 
+
+amt=tvfd*60000; 
+
+tamt1=tamt1+amt; 
+
+System.out.println("Do you want to add another place? Enter Y/N"); 
+
+choice=in.next(); 
+
+} 
+
+} 
+
+if(str.equalsIgnoreCase("I")) 
+
+{ 
+
+System.out.println("Welcome to Amrita's Italy Tourism Package"); 
+
+System.out.println("Italy Package\t\t\t\t Price in Rs."); 
+
+System.out.println("1.Colosseum\t\t\t\t\t18000"); 
+
+System.out.println("2.Pantheon\t\t\t\t\t 18000"); 
+
+System.out.println("3.Leaning tower of Pisa\t\t\t\t\t15000"); 
+
+System.out.println("4.Trevi Fountain\t\t\t\t\t16000"); 
+
+System.out.println("5.Roman Forum\t\t\t\t\t16000"); 
+
+System.out.println("6.Uffizigallery\t\t\t\t\t16000"); 
+
+System.out.println("7.Venice\t\t\t\t\t17000"); 
+
+System.out.println("8.Florence\t\t\t\t\t\t 17000"); 
+
+System.out.println("9.Rome\t\t\t\t\t19000"); 
+
+System.out.println("10.Milan\t\t\t\t\t19000"); 
+
+System.out.println("11.Tuscany\t\t\t\t\t14000"); 
+
+System.out.println("12.Amalfi\t\t\t\t\t16000"); 
+
+choice="Y"; 
+
+while(choice.equalsIgnoreCase("Y")) 
+
+{ 
+
+System.out.println("Choose the place that you wish to go by entering number: "); 
+
+vfd=in.nextInt(); 
+
+System.out.println("Enter the numer of days"); 
+
+tvfd=in.nextInt(); 
+
+if(vfd== 1||vfd ==2) 
+
+amt= tvfd * 18000; 
+
+if( vfd ==3) 
+
+amt = tvfd * 15000; 
+
+if(vfd== 4||vfd ==5||vfd==6||vfd==12) 
+
+amt =tvfd*14000; 
+
+if(vfd== 7||vfd ==8) 
+
+amt =tvfd*17000; 
+
+if(vfd== 9||vfd ==10) 
+
+amt=tvfd*19000; 
+
+if(vfd==11) 
+
+amt=tvfd*14000; 
+
+tamt1= tamt1+amt; 
+
+System.out.println("Do you need to add any another place? Enter Y/N"); 
+
+choice=in.next(); 
+
+} 
+
+ 
+
+if(str.equalsIgnoreCase("G")) 
+
+{ 
+
+System.out.println("Welcome to Amrita's Germany  Tourism Package "); 
+
+System.out.println("Germany Tourism package \t\t\t\t Price in Rs."); 
+
+System.out.println("1.Brandenburg gate\t\t\t\t24000"); 
+
+System.out.println("2.Colonnga\t\t\t\t28000"); 
+
+System.out.println("3.Marienplatz\t\t\t\t28000"); 
+
+System.out.println("4.Reichstag\t\t\t\t21000"); 
+
+System.out.println("5.English garden\t\t\t\t21000"); 
+
+System.out.println("6.Berlinerf fernsehturm\t\t\t\t19000"); 
+
+System.out.println("7.Europe park\t\t\t\t 19000"); 
+
+System.out.println("8.Munich residenz\t\t\t\t\t19000"); 
+
+System.out.println("9.Berlin\t\t\t\t24000"); 
+
+System.out.println("10. Hamburg\t\t\t\t21000"); 
+
+System.out.println("11.Museum island\t\t\t\t21000"); 
+
+System.out.println("12.Victuals\t\t\t21000"); 
+
+choice="Y"; 
+
+while(choice.equalsIgnoreCase("Y")) 
+
+{ 
+
+System.out.println("Choose the place you wish to go by entering the number:"); 
+
+fd=in.nextInt(); 
+
+System.out.println("Enter the number of days"); 
+
+tfd=in.nextInt(); 
+
+if(fd== 1||fd ==9) 
+
+amt =tfd* 24000; 
+
+if(fd== 2||fd ==3) 
+
+amt =tfd* 28000; 
+
+if(fd== 4||fd ==5||fd==10||fd==11||fd==12) 
+
+amt =tfd* 21000; 
+
+if (fd==6||fd==7||fd==8) 
+
+amt =tfd* 19000; 
+
+int tamtl= tamt1+amt; 
+
+System.out.println("Do you need to add any another place? Enter Y /N"); 
+
+choice=in.next(); 
+
+} 
+
+} 
+
+} 
+
+break; 
+
+case 3: 
+
+System.out.println("Amrita's Australia Tourism Package Price in Rs."); 
+
+System.out.println(); 
+
+System.out.println("1.Sydney\t\t\t\t1100"); 
+
+System.out.println("2.Melbourne\t\t\t11000"); 
+
+System.out.println("3.Fraser island\t\t\t9000"); 
+
+System.out.println("4.Uluru\t\t\t\t9000"); 
+
+System.out.println("5.Kangaroo island\t\t\t\t\7000"); 
+
+System.out.println("6.Preth\t\t\t\t\t9000"); 
+
+System.out.println("7.Brisbane \t\t\t\t9000"); 
+
+System.out.println("8.Hyde park\t\t\t\t\t8000"); 
+
+System.out.println("9.Broome\t\t\t\t8000"); 
+
+System.out.println("10.Adelaide\t\t\t\t\t12000"); 
+
+choice="Y"; 
+
+while(choice.equalsIgnoreCase("Y")) 
+
+{ 
+
+System.out.println("Choose you the place you wish to go by entering the number:"); 
+
+int d= in.nextInt(); 
+
+System.out.println("Enter the number of days"); 
+
+totald=in.nextInt(); 
+
+if (d==1||d==2) 
+
+damt=totald*11000; 
+
+if(d== 3||d ==4||d==6||d==7) 
+
+amt= totald* 9000; 
+
+if(d==5) 
+
+damt = totald * 7000 ; 
+
+if ( d ==8||d==9) 
+
+damt = totald * 8000; 
+
+if(d ==10) 
+
+damt= totald*12000; 
+
+tamt2=tamt2+damt; 
+
+System.out.println("Do you need to add any another place? Enter Y /N"); 
+
+choice=in.next(); 
+
+} 
+
+break; 
+
+default: 
+
+System.out.println("You have entered wrong choice!!."); 
+
+} 
+
+System.out.println("Enter 'Y' to go to Continue and N for exit."); 
+
+choice1=in.next(); 
+
+} 
+
+System.out.println("*******Amrita's Tourism Package********"); 
+
+System.out.println("*** *** Amrita's Asian Tourism************"); 
+
+System.out.println("Total cost of Asia's Tourism= Rs."+tamt); 
+
+System.out.println("**********Amrita's Europe Tourism***********"); 
+
+System.out.println("Total cost of Europe's Tourism= Rs."+tamt1); 
+
+System.out.println("**********Amrita's Australia Package *************"); 
+
+System.out.println("Total cost of Australia's Package = Rs."+tamt2); 
+
+tot=tamt+tamt1+tamt2; 
+
+gst=tot*18.0/100.0; 
+
+System.out.println("GST Rs. "+gst); 
+
+gtotal=tot+gst; 
+
+System.out.println("Amount to be paid Rs. "+gtotal); System.out.println("Thanks for using Amrita's Tourism Package!!"); 
+
+System.out.println("Your Pleasure Our Comfort!!!"); 
+
+System.out.println("Visit Again!!!"); 
+
+System.out.println("Program Ends!!"); 
+
+}  
+
+} 
+
+ 
